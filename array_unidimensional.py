@@ -72,3 +72,27 @@ def promedio_positivos(lista:list) -> float:
         print(f"{contador}")
     
     return suma / contador
+
+def calcular_producto(lista: list) -> float:
+    """
+    _summary_
+
+    Args:
+        lista (list): _description_
+
+    Returns:
+        float: _description_
+    """
+
+    resultado = 1.0
+
+    if lista == None:
+        print("Error, prueba poniendo valores numericos.")
+    
+    else:
+        for numero in lista:
+            resultado *= numero
+    
+    return resultado
+
+def posicion_maxima(lista: list) -> int:
