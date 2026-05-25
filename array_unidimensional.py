@@ -64,4 +64,11 @@ def promedio_positivos(lista:list) -> float:
     contador = 0
     
     for numero in lista:
-        if numero >
+        if numero > 0:
+            suma += numero
+            contador += 1
+    
+    if contador == 0:
+        print(f"{contador}")
+    
+    return suma / contador
