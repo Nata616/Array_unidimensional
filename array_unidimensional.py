@@ -129,3 +129,21 @@ def obtener_posiciones_maximas(lista: list) -> list:
     Returns:
         list: _description_
     """
+
+    if lista == None:
+        print("Error, Porfavor ingrese numeros enteros para la lista.")
+
+    else:
+        maximo = lista[0]
+        for numero in lista:
+            if numero > maximo:
+                maximo = numero
+
+        posiciones = []
+
+        for i in range(len(lista)):
+            if lista [i] == maximo:
+                posiciones.append(i)
+        
+    return posiciones
+    
