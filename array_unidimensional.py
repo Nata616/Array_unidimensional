@@ -44,7 +44,24 @@ def calcular_promedio(lista:list) -> float:
         print("Error, inserte valores numericos.")
 
     else:
-        for num in lista:
-            suma += num
+        for numero in lista:
+            suma += numero
 
     return suma / len(lista)
+
+def promedio_positivos(lista:list) -> float:
+    """
+    _summary_
+
+    Args:
+        lista (list): _description_
+
+    Returns:
+        float: _description_
+    """
+
+    suma = 0.0
+    contador = 0
+    
+    for numero in lista:
+        if numero >
