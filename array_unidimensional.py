@@ -96,3 +96,36 @@ def calcular_producto(lista: list) -> float:
     return resultado
 
 def posicion_maxima(lista: list) -> int:
+    """
+    _summary_
+
+    Args:
+        lista (list): _description_
+
+    Returns:
+        int: _description_
+    """
+
+    if lista == None:
+        print("Error, inserte valores enteros porfavor.")
+    
+    maximo = lista[0]
+    posicion = 0
+
+    for i in range(1, len(lista)):
+        if lista[i] > maximo:
+            maximo = lista[i]
+            posicion = i
+    
+    return posicion
+
+def obtener_posiciones_maximas(lista: list) -> list:
+    """
+    _summary_
+
+    Args:
+        lista (list): _description_
+
+    Returns:
+        list: _description_
+    """
