@@ -146,4 +146,27 @@ def obtener_posiciones_maximas(lista: list) -> list:
                 posiciones.append(i)
         
     return posiciones
+
+def reemplazar_nombres(lista_nombres: list, 
+                       nombre_antiguo:str, 
+                       nombre_nuevo:str) -> int:
+    """
+    _summary_
+
+    Args:
+        lista_nombres (list): _description_
+        nombre_antiguo (str): _description_
+        nombre_nuevo (str): _description_
+
+    Returns:
+        int: _description_
+    """
+
+    contador = 0
     
+    for i in range(len(lista_nombres)):
+        if lista_nombres[i] == nombre_antiguo:
+            lista_nombres[i] = nombre_nuevo
+            contador += 1
+    
+    return contador
