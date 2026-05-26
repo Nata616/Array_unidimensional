@@ -190,3 +190,27 @@ def obtener_interseccion(array_1: list, array_2: list) -> list:
             resultado.append(elemento)
         
     return resultado
+
+def obtener_union(array_1: list, array_2: list) -> list:
+    """
+    _summary_
+
+    Args:
+        array_1 (list): _description_
+        array_2 (list): _description_
+
+    Returns:
+        list: _description_
+    """
+
+    resultado = []
+
+    for elemento in array_1:
+        if elemento != resultado:
+            resultado.append(elemento)
+    
+    for elemento in array_2:
+        if elemento != resultado:
+            resultado.append(elemento)
+    
+    return resultado
