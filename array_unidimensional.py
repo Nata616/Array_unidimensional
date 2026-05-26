@@ -170,3 +170,23 @@ def reemplazar_nombres(lista_nombres: list,
             contador += 1
     
     return contador
+
+def obtener_interseccion(array_1: list, array_2: list) -> list:
+    """
+    _summary_
+
+    Args:
+        array1 (list): _description_
+        array2 (list): _description_
+
+    Returns:
+        list: _description_
+    """
+
+    resultado = []
+
+    for elemento in array_1:
+        if elemento in array_2 and elemento != resultado:
+            resultado.append(elemento)
+        
+    return resultado
