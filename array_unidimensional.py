@@ -1,49 +1,51 @@
 def crear_array(cantidad:int) -> int:
     """
-    _summary_
+    crea una lista de numeros enteros
+    se inicializa en 0, con el tamaño especificado
+    por parametro
 
     Args:
-        cantidad (int): _description_
+        cantidad (int): numero de elementos que tiene la lista
 
     Returns:
-        int: _description_
+        int: una lista de enteros, rellena con 0
     """
 
     return[0] * cantidad
 
 def cargar_array(cantidad:int) -> list:
     """
-    _summary_
+    le pide al usuario por consola para hacer una lista
+    del tamaño especificado
 
     Args:
-        cantidad (int): _description_
+        cantidad (int): cantidad de numeros que se van a solicitar
 
     Returns:
-        list: _description_
+        list: una lista con enteros ingresados por el usuario
     """
 
     mi_array = crear_array(cantidad)
     for i in range(cantidad):
-        mi_array[i] = int(input(f"Ingrese el numero para la posicion [{i}]: "))
+        mi_array[i] = input(f"Ingrese el numero para la posicion [{i}]: ")
     return mi_array
 
 def calcular_promedio(lista:list) -> float:
     """
-    _summary_
+    calcula el promedio de todos los numeros de la lista
 
     Args:
-        lista (list): _description_
+        lista (list): lista de numeros int/float
 
     Returns:
-        float: _description_
+        float: el promedio de los numeros
     """
-
-    suma = 0.0
 
     if lista == None:
         print("Error, inserte valores numericos.")
 
     else:
+        suma = 0.0
         for numero in lista:
             suma += numero
 
@@ -51,13 +53,13 @@ def calcular_promedio(lista:list) -> float:
 
 def promedio_positivos(lista:list) -> float:
     """
-    _summary_
+    filtra los numeros mayores de la lista y calcula el promedio
 
     Args:
-        lista (list): _description_
+        lista (list): lista de numeros a evaluar
 
     Returns:
-        float: _description_
+        float: el promedio de los numeros positivos
     """
 
     suma = 0.0
@@ -75,13 +77,13 @@ def promedio_positivos(lista:list) -> float:
 
 def calcular_producto(lista: list) -> float:
     """
-    _summary_
+    multiplica todos los elementos de la lista
 
     Args:
-        lista (list): _description_
+        lista (list): lista de numeros
 
     Returns:
-        float: _description_
+        float: el total
     """
 
     resultado = 1.0
@@ -97,13 +99,13 @@ def calcular_producto(lista: list) -> float:
 
 def posicion_maxima(lista: list) -> int:
     """
-    _summary_
+    busca el valor mas alto de la lista
 
     Args:
-        lista (list): _description_
+        lista (list): lista de numeros a buscar
 
     Returns:
-        int: _description_
+        int: indice base 0 del valor maximo
     """
 
     if lista == None:
@@ -121,13 +123,14 @@ def posicion_maxima(lista: list) -> int:
 
 def obtener_posiciones_maximas(lista: list) -> list:
     """
-    _summary_
+    identifica el valor maximo de una lista y
+    muestra todas las posiciones en las cuales aparece
 
     Args:
-        lista (list): _description_
+        lista (list): Lista de numeros a analizar
 
     Returns:
-        list: _description_
+        list: Lista con los indices donde se encuentra el valor maximo
     """
 
     if lista == None:
@@ -151,15 +154,16 @@ def reemplazar_nombres(lista_nombres: list,
                        nombre_antiguo:str, 
                        nombre_nuevo:str) -> int:
     """
-    _summary_
+    recorre una lista reemplazando un nombre especifico
+    por uno nuevo
 
     Args:
-        lista_nombres (list): _description_
-        nombre_antiguo (str): _description_
-        nombre_nuevo (str): _description_
+        lista_nombres (list): lista de str que contiene los nombres
+        nombre_antiguo (str): el nombre que se desea cambiar
+        nombre_nuevo (str): el nuevo nombre que se cambiara por el antiguo
 
     Returns:
-        int: _description_
+        int: la cantidad total de cambios que se hicieron
     """
 
     contador = 0
@@ -173,14 +177,15 @@ def reemplazar_nombres(lista_nombres: list,
 
 def obtener_interseccion(array_1: list, array_2: list) -> list:
     """
-    _summary_
+    muestra la interseccion entre 2 listas, 
+    omitiendo duplicados
 
     Args:
-        array1 (list): _description_
-        array2 (list): _description_
+        array1 (list): primer lista de elementos
+        array2 (list): segunda lista de elementos
 
     Returns:
-        list: _description_
+        list: lista de elementos en comun
     """
 
     resultado = []
@@ -193,14 +198,15 @@ def obtener_interseccion(array_1: list, array_2: list) -> list:
 
 def obtener_union(array_1: list, array_2: list) -> list:
     """
-    _summary_
+    realiza la union de dos listas, no hay valores
+    repetidos en la lista retorno
 
     Args:
-        array_1 (list): _description_
-        array_2 (list): _description_
+        array_1 (list): primer lista de elementos
+        array_2 (list): segunda lista de elementos
 
     Returns:
-        list: _description_
+        list: lista con la combinacion de todos los elementos
     """
 
     resultado = []
@@ -217,14 +223,15 @@ def obtener_union(array_1: list, array_2: list) -> list:
 
 def obtener_diferencia(array_1: list, array_2: list) -> list:
     """
-    _summary_
+    calcula la diferencia de dos listas, encuentra los
+    elementos que estan en la primera lista pero no estan en la segunda
 
     Args:
-        array_1 (list): _description_
-        array_2 (list): _description_
+        array_1 (list): lista del cual se extraen los elementos
+        array_2 (list): lista que actua como filtro
 
     Returns:
-        list: _description_
+        list: lista con los elementos que solo muestra el primer array
     """
 
     resultado = []
